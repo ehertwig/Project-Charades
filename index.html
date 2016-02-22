@@ -24,20 +24,23 @@
 
 
 
-		<h2>Level 1</h2>
-		<h2>Level 2</h2>
+
+
 
 		<div class="button pulse">
-			<ul class = "cards">
+			<ul class="cards">
 				<div class="col1">
+					<h2>Level 1</h2>
 					<li>
-						<button class='button' id='an' onclick="randomAnimal()"><img id="pic" src="animal[random]" />Animals</button>
+						<button class='button' id='an' onclick="randomAnimal()"><img id="pic" src="images/animals.jpg" />Animals</button>
 					</li>
 					<li>
 						<button class='button' id='psn' onclick="randomPerson()">People</button>
 					</li>
 				</div>
+
 				<div class="col2">
+					<h2>Level 2</h2>
 					<li>
 						<button class='button' id='fp' onclick="randomFamousPeople()">Famous People</button>
 					</li>
@@ -48,21 +51,23 @@
 			</ul>
 		</div>
 
-		<h3>Team 1</h3>
-		<h3>Team 2</h3>
 
-		<div class="score">
 
-			<button class="circle" onclick="minusOneL()">-</button>
-			<span id="changeL">0</span>
-			<button class="circle" onclick="plusOneL()">+</button>
-
+		<div class="container">
+			<div class="team1">
+				<h3>Team 1</h3>
+				<button class="circle" onclick="minusOneL()">-</button>
+				<span id="changeL">0</span>
+				<button class="circle" onclick="plusOneL()">+</button>
+			</div>
 			<div class='team2'>
+				<h3>Team 2</h3>
 				<button class="circle" onclick="minusOneR()">-</button>
 				<span id="changeR">0</span>
 				<button class="circle" onclick="plusOneR()">+</button>
-			</div>
 
+
+			</div>
 		</div>
 	</body>
 	<footer>Thanks for playing!</footer>

@@ -7,9 +7,6 @@
 				body,
 				div,
 				span,
-				applet,
-				object,
-				iframe,
 				h1,
 				h2,
 				h3,
@@ -18,72 +15,19 @@
 				h6,
 				p,
 				blockquote,
-				pre,
 				a,
-				abbr,
-				acronym,
-				address,
-				big,
-				cite,
-				code,
-				del,
-				dfn,
-				em,
 				img,
-				ins,
-				kbd,
-				q,
-				s,
-				samp,
-				small,
-				strike,
 				strong,
-				sub,
-				sup,
-				tt,
 				var,
 				b,
 				u,
 				i,
-				center,
-				dl,
-				dt,
-				dd,
 				ol,
 				ul,
 				li,
-				fieldset,
-				form,
-				label,
-				legend,
-				table,
-				caption,
-				tbody,
-				tfoot,
-				thead,
-				tr,
-				th,
-				td,
-				article,
-				aside,
-				canvas,
-				details,
-				embed,
-				figure,
-				figcaption,
 				footer,
 				header,
-				hgroup,
-				menu,
-				nav,
-				output,
-				ruby,
-				section,
-				summary,
-				time,
-				mark,
-				audio,
-				video {
+				{
 					margin: 0;
 					padding: 0;
 					border: 0;
@@ -95,6 +39,7 @@
 				body {
 					background-color: #B0C4DE;
 					font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+					font-size: 16px;
 				}
 				
 				h1 {
@@ -105,13 +50,13 @@
 				}
 				
 				p {
-					font: 17px;
+					font: 1.5em;
 					line-height: 1.5;
 					margin-bottom: 35px;
 				}
 				
 				#coin {
-					font: bold 18px "Baskerville", sans-serif;
+					font: bold 1.2em "Baskerville", sans-serif;
 					color: #5C4033;
 					padding: 5px;
 					width: 80px;
@@ -119,7 +64,7 @@
 					-webkit-border-radius: 80px;
 					-moz-border-radius: 80px;
 					border-radius: 80px;
-					background: radial-gradient(#CD7F32, #5C4033);
+					background: radial-gradient(#f2a356, #5C4033);
 					border: 5px dotted #aa7333;
 					text-align: center;
 					margin: 0 auto;
@@ -127,20 +72,14 @@
 				}
 				
 				#coin:hover {
-					background: radial-gradient(#aa7333, #5C4033);
+					background: radial-gradient(#bf843e, #5C4033);
 					border: 5px dotted #CD7F32;
 				}
 				
 				h2 {
 					font-size: 35px;
-					display: inline-block;
-					margin: 40px 275px 0 250px;
 					text-align: center;
-				}
-				
-				.col1,
-				.col2 {
-					display: block;
+					margin-bottom: 20px;
 				}
 				
 				.cards {
@@ -182,10 +121,6 @@
 					display: inline;
 				}
 				
-				ul li:nth-child(3) {
-					margin-left: 80px;
-				}
-				
 				#an {
 					border: 7px solid purple;
 					background: rgb(234, 207, 247);
@@ -220,27 +155,33 @@
 					filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fef6bc', endColorstr='#fdee8d', GradientType=1);
 				}
 				
-				h3 {
-					font-size: 30px;
-					display: inline-block;
-					margin: 40px 250px 0px 250px;
+				.container {
+					width: 65%;
+					margin: 0 auto;
+					clear: both;
 				}
 				
-				.score {
+				h3 {
+					font-size: 30px;
+					text-align: center;
+					margin-bottom: 20px;
+				}
+				
+				.team1,
+				.team2 {
 					display: inline-block;
-					margin: 40px 180px 0 220px;
+					padding: 30px;
 				}
 				
 				.team2 {
-					display: inline-block;
-					margin-left: 520px;
+					float: right;
 				}
 				
 				span {
 					font-size: 45px;
 					font-style: bold;
 					text-shadow: 1px 1px 1px #708090;
-					margin: 0 15px;
+					margin: 0 auto;
 				}
 				
 				.circle {
@@ -249,21 +190,23 @@
 					width: 75px;
 					height: 75px;
 					font: 30px "Treubuchet MS", sans-serif;
-					border: 6px solid #0022CD;
-				}
-				
-				.circle:hover {
 					border: 7px solid #0033FF;
 					background-color: #F0F0F0;
 				}
 				
+				.circle:hover {
+					border: 7px solid #0022CD;
+					background-color: #e0e0ef;
+				}
+				
 				footer {
-					margin-top: 400px;
+					margin-top: 200px;
 					font: bold 20px sans-serif;
 					text-align: center;
 				}
+				/*--------------------@media------------------------------*/
 				
-				@media screen and (min-width: 768px) {
+				@media (min-width: 769px) {
 					p {
 						width: 75%;
 						margin: 0 auto 35px;
@@ -271,6 +214,50 @@
 					.col1,
 					.col2 {
 						display: inline-block;
+					}
+					.cards {
+						margin: 0 auto;
+					}
+				}
+				
+				@media (min-width: 1024px) {
+					.cards {
+						width: 75%;
+					}
+					.col2 {
+						float: right;
+					}
+				}
+				
+				@media (max-width: 768px) {
+					.container {
+						width: 100%;
+						clear: both;
+					}
+					.col1,
+					.col2 {
+						width: 95%;
+						margin: 0 auto;
+						clear: both;
+					}
+					.col2 {
+						float: none;
+					}
+					.button {
+						width: 120px;
+						height: 170px;
+						font-size: 25px;
+						margin: 10px;
+					}
+					#pic {
+						width: 75px;
+						height: 100px;
+					}
+					.team1,
+					.team2 {
+						padding: 10px;
+						clear: both;
+						margin: 0;
 					}
 				}
 				/*
